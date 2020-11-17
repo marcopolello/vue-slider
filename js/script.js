@@ -12,6 +12,14 @@ var app = new Vue ({
         this.counter ++;
         // console.log(this.counter);
       }
+    },
+    prevPic: function functionName() {
+      if (this.counter === 0) {
+        this.counter = this.pictures.length - 1;
+      } else {
+        this.counter --;
+        console.log(this.counter);
+      }
     }
   }
 })
