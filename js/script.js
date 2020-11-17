@@ -5,15 +5,15 @@ var app = new Vue ({
     timer: null,
     currentIndex: 0,
     activeClass: "active",
-    isActive: false,
   },
   // mounted: function() {
   //   this.startSlide();
   // },
   methods: {
-    // startSlide: function() {
-    //   this.timer = setInterval(this.nextPic, 4000);
-    // },
+    // funzione per far avanzare slide in automatico
+    startSlide: function() {
+      this.timer = setInterval(this.nextPic, 4000);
+    },
     nextPic: function () {
       if (this.currentIndex >= (this.pictures.length - 1)) {
         this.currentIndex = 0;
