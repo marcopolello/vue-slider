@@ -4,16 +4,16 @@ var app = new Vue ({
     pictures: ["img/image1.jpg", "img/image2.jpg", "img/image3.jpg", "img/image4.jpg"],
     timer: null,
     currentIndex: 0,
-    myClass: "active",
-    circleCurrent: false
+    activeClass: "active",
+    isActive: false,
   },
-  mounted: function() {
-    this.startSlide();
-  },
+  // mounted: function() {
+  //   this.startSlide();
+  // },
   methods: {
-    startSlide: function() {
-      this.timer = setInterval(this.nextPic, 4000);
-    },
+    // startSlide: function() {
+    //   this.timer = setInterval(this.nextPic, 4000);
+    // },
     nextPic: function () {
       if (this.currentIndex >= (this.pictures.length - 1)) {
         this.currentIndex = 0;
@@ -30,10 +30,5 @@ var app = new Vue ({
         // console.log(this.counter);
       }
     }
-  },
-  // computed: {
-  //   currentCircle: function() {
-  //     return this.pictures[Math.abs(this.currentIndex) % this.pictures.length];
-  //   }
-  // }
+  }
 })
