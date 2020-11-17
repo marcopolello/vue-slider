@@ -52,3 +52,9 @@
 .nav > i.active {
     color: blue;
 }
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.9);
+}
+/* .nav > i:hover{
+  color: blue;
+} */
